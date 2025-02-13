@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'orm_practice.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'orm_practice',        # The name of the database you just created
+        'USER': 'dev',              # The PostgreSQL username
+        'PASSWORD': '123',      # The PostgreSQL password
+        'HOST': 'localhost',           # The database server (localhost for local setup)
+        'PORT': '5432',                # Default PostgreSQL port
     }
 }
+
 
 
 # Password validation
